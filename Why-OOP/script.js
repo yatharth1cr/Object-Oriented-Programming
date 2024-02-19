@@ -51,5 +51,3 @@ function createQuestion(title, options, correctAnswerIndex) {
   };
   return question;
 }
-
-// Write test by creating two objects also test both methods.
