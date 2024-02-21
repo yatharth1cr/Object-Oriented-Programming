@@ -43,7 +43,6 @@ function createQuestion(title, options, correctAnswerIndex) {
 // - Convert the function to use `this` keyword
 function createQuestion2(title, options, correctAnswerIndex) {
   let question = {};
-
   question.title = title;
   question.options = options;
   question.correctAnswerIndex = correctAnswerIndex;
@@ -57,11 +56,3 @@ function createQuestion2(title, options, correctAnswerIndex) {
 
   return question;
 }
-
-// - Write test by creating two objects also test both methods.
-
-// const testData = {
-//     title: "Where is the capital of Jordan",
-//     options: ["Tashkent", "Amaan", "Kuwait City", "Nairobi"],
-//     correctAnswerIndex: 1,
-//   };
