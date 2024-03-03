@@ -3,4 +3,4 @@
 ### 1. OOP
 ### 2. Object Creation
 ### 3. More About Class
-###Prototypal Inheritance
+### 4. Prototypal Inheritance
