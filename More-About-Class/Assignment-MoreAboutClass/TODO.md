@@ -33,13 +33,25 @@ class Square {
 - Create a `area` getter method using which we can get the area of the square.
 
 ```js
-
+  get calcArea() {
+    const area = this.width * this.width;
+    return `${area}`;
+  }
 ```
 
 - Create a `area` setter method that will accept the area of the square. Based on the value of area it will set the value of `width` and `height`. If the passed value is not the area of the square alert say `Not a valid input`
 
 ```js
-
+  set area(areaSquare) {
+    const calculatedArea = this.width * this.width;
+    if (calculatedArea !== areaSquare) {
+      console.log("Not a valid input");
+    } else {
+      const side = Math.sqrt(areaSquare);
+      this.width = `${side}`;
+      this.height = `${side}`;
+    }
+  }
 ```
 
 - Create a static method named `isEqual` which accepts two `square` object with `width` and `height` property. If the area of both square is same it will return `true` or `false`.
@@ -77,12 +89,21 @@ class Square {
 - Create a `User` class that accepts `firstName` and `lastName` property
 
 ```js
-
+class User {
+  constructor(firstName, lastName) {
+    User.firstName = firstName;
+    User.lastName = lastName;
+  }
+}
 ```
 
 - Create a getter method named `fullName` that will return the full name of the person.
 
 ```js
+fullName() {
+    const name = this.firstName + " " + this.lastName;
+    return `${name}`;
+  }
 
 ```
 
