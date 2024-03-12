@@ -1,35 +1,37 @@
-class Square {
-  constructor(side) {
-    this.width = side;
-    this.height = side;
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 
-  get description() {
-    alert(`The square is ${this.width * this.height}`);
+  get fullName() {
+    return this.firstName + " " + this.lastName;
   }
-
-  get calcArea() {
-    const area = this.width * this.width;
-    return `${area}`;
-  }
-
-  set area(areaSquare) {
-    const calculatedArea = this.width * this.width;
-    if (calculatedArea !== areaSquare) {
-      console.log("Not a valid input");
+  set fullName(name) {
+    if (name.length < 5) {
+      console.log("Full name should be more than 5 characters");
     } else {
-      const side = Math.sqrt(areaSquare);
-      this.width = `${side}`;
-      this.height = `${side}`;
+      const a = name.split(" ");
+      this.firstName = a[0];
+      this.lastName = a[1];
     }
   }
-  static isEqual(a, b) {
-    return a.calcArea === b.calcArea;
+  nameContain(str) {
+    return this.fullName.includes(str);
   }
 }
+let user1 = new User("Yatharth", "Giri");
+console.group("user1");
+console.log(user1);
+console.log((user1.fullName = "Shubham Kumar"));
+console.log(user1.fullName);
+console.log(user1.nameContain("a"));
+console.groupEnd();
 
-let sqr1 = new Square(4);
-let sqr2 = new Square(4);
-console.log(sqr1);
-console.log(sqr2);
-console.log(Square.isEqual(sqr1, sqr2));
+let user2 = new User("Anish", "kumar");
+console.group("user2");
+console.log(user2);
+console.log((user2.fullName = "Ansh"));
+console.log(user2.fullName);
+console.log(user2.nameContain("z"));
+console.groupEnd();
