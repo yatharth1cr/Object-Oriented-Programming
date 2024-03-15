@@ -4,7 +4,22 @@
 
 ```js
 Answer:
-when we call a function without bounding to any object then this keyword will represent the window obj
+- when we calling a function and if there is nothing before that function then the value of this will be window.
+- in non-strict mode, the value of this will be global object.
+- in strict mode, the value of this will be undefined.
+
+Example:-
+function hello(){
+    console.log(this)
+}
+hello();//window
+
+Example:-
+function hello(){
+    "use strict"
+    console.log(this)
+}
+hello();//undefined
 ```
 
 - ### Implicit Binding:-
