@@ -68,7 +68,10 @@ hey(); // OUTPUT
 3. **What all things new keyword does. Explain with example.**
 
 ```js
-
+- It creates a new object.
+- It links the newly created object's prototype to the prototype property of the constructor function.
+- It calls the constructor function with the newly created object as the context (this).
+- it returns the newly created object.
 ```
 
 4. **What is the difference between `proto` (dunder proto) and `prototype`**
