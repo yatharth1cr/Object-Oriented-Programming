@@ -25,6 +25,9 @@ hello();//undefined
 - ### Implicit Binding:-
 
 ```js
+- when we call a function and if there is not any object before the function calling then the implicit binding will be occured and this will target to the window.
+- in strict mode this will target to window
+in non strict mode this will be undefined.
 
 ```
 
@@ -69,7 +72,7 @@ hey(); // OUTPUT
 
 ```js
 - It creates a new object.
-- It links the newly created object's prototype to the prototype property of the constructor function.
+- It links the newly created object's prototype to the `prototype` property of the constructor function.
 - It calls the constructor function with the newly created object as the context (this).
 - it returns the newly created object.
 ```
